@@ -1,1 +1,1 @@
-Decompiles a bitmap or a graphic image
+compiles a bitmap or a graphic image
