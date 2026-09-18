@@ -16,7 +16,27 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        private void newWin(int x,int y) 
+        {
+            Pen ppp = new Pen(Color.FromArgb(0, 0, 0));
+            Pen ppp2 = new Pen(Color.FromArgb(255, 255, 255));
+            Brush p1 = new SolidBrush(Color.FromArgb(255, 255, 255, 255));
+            Brush p2 = new SolidBrush(Color.FromArgb(255, 0, 0, 0));
+            Rectangle r = new Rectangle(x, y, 100, 100);
+            Rectangle rr = new Rectangle(x, y, 100, 10);
+            ee = Graphics.FromImage(b);
+            ee.FillRectangle(p1, r);
+            ee.DrawRectangle(ppp, r);
+            ee.FillRectangle(p2, rr);
+            ee.DrawRectangle(ppp2, rr);
 
+
+            ppp.Dispose();
+            p1.Dispose();
+            p2.Dispose();
+            ppp2.Dispose();
+            ee.Dispose();
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             double[] dcos = { 1.00, 0.707, 0.00, -0.707, -1.00, -0.707, 0.00, 0.707, 1.00 };
@@ -25,27 +45,15 @@ namespace WindowsFormsApp1
             pictureBox1.Image = b;
             xxx = pictureBox1.Width / 2;
             yyy = pictureBox1.Height / 2;
-            ee = Graphics.FromImage(b);
-            Pen ppp = new Pen(Color.FromArgb(0, 0, 0));
-            Pen ppp2 = new Pen(Color.FromArgb(255, 255, 255));
-            Brush p1 = new SolidBrush(Color.FromArgb(255, 255, 255, 255));
-
-            Brush p2 = new SolidBrush(Color.FromArgb(255, 0, 0, 0));
+            
+            
             for (int a = 0; a < 8; a++) {
-                Rectangle r = new Rectangle(a*10,a*10,100,100);
-                Rectangle rr = new Rectangle(a * 10, a * 10, 100, 10);
-                ee.FillRectangle(p1,r);
-                ee.DrawRectangle(ppp, r);
-                ee.FillRectangle(p2, rr);
-                ee.DrawRectangle(ppp2, rr);
+                newWin(a * 10+10, a * 10+10);
+               
 
             }
             
-            ppp.Dispose();
-            p1.Dispose();
-            p2.Dispose();
-            ppp2.Dispose();
-            ee.Dispose();
+           
 
         }
     }
