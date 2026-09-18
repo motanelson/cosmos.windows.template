@@ -1,1 +1,1 @@
-compiles a bitmap or a graphic image
+start id windows easy
