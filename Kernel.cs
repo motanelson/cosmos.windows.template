@@ -27,7 +27,7 @@ namespace Cosmosvirtual
             Rectangle r = new Rectangle(x,y,200,200);
             Rectangle r1 = new Rectangle(x,y,200,20);
             canvas.DrawFilledRectangle(pw, x, y, 400, 400);
-            canvas.DrawRectangle(pb, x, y, 400, 200);
+            canvas.DrawRectangle(pb, x, y, 400, 400);
             canvas.DrawFilledRectangle(pb, x, y, 400, 20);
             canvas.DrawRectangle(pw, x, y, 400, 20);
         }
@@ -111,7 +111,7 @@ namespace Cosmosvirtual
 
             for (int i = 0; i < 8; i++) 
             {
-                graf.drawWindows(i * 20, i * 20);
+                graf.drawWindows(i * 40, i * 40);
                 
             }
             graf.displays();
